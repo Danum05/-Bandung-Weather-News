@@ -1,5 +1,6 @@
-#PUB1
-# pub1.py (Publisher)
+#PUB3
+
+# pub3.py (Publisher)
 import paho.mqtt.client as mqtt
 import requests
 import time
@@ -9,7 +10,7 @@ nama_broker = "test.mosquitto.org"  # Ganti dengan alamat broker
 
 # Buat client baru bernama P2
 print("Creating new instance")
-client = mqtt.Client("P2")
+client = mqtt.Client("P4")
 
 # Koneksi ke broker
 print("Connecting to broker")
@@ -32,7 +33,7 @@ def print_suhu(result, city):
 def main():
     while True:
         try:
-            cities = ["Bandung"]
+            cities = ["Cianjur"]
             for city in cities:
                 query = city
                 w_data = data_suhu(query)
